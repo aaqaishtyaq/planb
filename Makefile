@@ -6,4 +6,8 @@ build:
 
 .PHONY: run
 run:
-	@sudo docker run -t -i -v /home/ubuntu/go/src/github.com/aaqaishtyaq/planb:/go/src/github.com/aaqaishtyaq/planb planb-dev:latest
+	@sudo docker run -t -i -v /home/ubuntu/go/src/github.com/aaqaishtyaq/planb:/go/src/github.com/aaqaishtyaq/planb planb-dev:latest bash
+
+.PHONY: test
+test:
+	@go test -short -race ./...
