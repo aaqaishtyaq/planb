@@ -1,0 +1,11 @@
+FROM golang:1.11.13
+
+RUN apt-get update && apt-get install -y vim git && \
+    curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh && \
+    mkdir -p /go/src/github.com/aaqaishtyaq && \
+    sudo apt-get install redis-server syslog-ng -y && \
+    service syslog-ng start && \
+
+
+WORKDIR /go/src/github.com/aaqaishtyaq/planb
+
