@@ -4,4 +4,3 @@ echo "export GO111MODULE=on" >> "${HOME}/.bashrc"
 /etc/init.d/syslog-ng start
 service syslog-ng status
 redis-server --daemonize yes
-exec "$@"
